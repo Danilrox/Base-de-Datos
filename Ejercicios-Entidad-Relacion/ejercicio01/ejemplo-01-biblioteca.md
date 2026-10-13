@@ -2,4 +2,4 @@
 
 Una biblioteca registra libros y autores. Un libro puede tener varios autores y un autor varios libros. Los socios toman libros prestados; de cada préstamo interesan la fecha de retiro y la de devolución.
 
-(Ejercicio01.drawio.png)
+![Diagrama ER - Sistema de Biblioteca](Ejercicio01.drawio.png)

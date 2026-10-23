@@ -1,0 +1,22 @@
+create table propietario (
+    cedula varchar(10) primary_key,
+    nombres varchar(15) notNull,
+    apellidos varchar(15) noNull,
+    direccion text notNull,
+);
+
+create table telefonos (
+    telefonos varchar(10) notNull,
+    cedula varchar (10) notNull,
+    primary_key(telefono, cedula),
+    foraing_key(cedula) refereneces on propietario(cedula),
+);
+
+create table mascota (
+    identificador varchar(10) primary_key,
+    nombre_tipo set(...) notNull,
+    fecha_nacimiento date notNull,
+    edad int notNull,
+    id_propietario varchar(10),
+    foraing_key (id_propietario) references on propietario(cedula),
+);

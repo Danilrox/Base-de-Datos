@@ -1,0 +1,19 @@
+create table persona (
+    codigo varchar(10) primary_key,
+    cedula varchar(10) UNIQUE,
+    nombre varchar(10) notNull,
+);
+
+create table veterinario (
+    codigo varchar (10) primary_key,
+    fecha_de_alta Date notNull,
+    especialidad varchar(10) notNull,
+    foreign_key(codigo) references on personal(codigo),
+);
+
+create table Auxiliar (
+    codigo varchar(10) primary_key,
+    base_cotizacion double notNull,
+    foreign_key(codigo) references personal(codigo),
+);
+
